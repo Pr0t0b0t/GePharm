@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>661</width>
+    <height>349</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>661</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuJourn_e">
+    <property name="title">
+     <string>Journée</string>
+    </property>
+    <addaction name="actionOuvrir_une_nouvelle_journ_e"/>
+    <addaction name="actionFermer_une_nouvelle_journ_e"/>
+    <addaction name="separator"/>
+    <addaction name="actionActiver_une_semaine_de_garde"/>
+    <addaction name="actionD_sactiver_une_semaine_de_garde"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuVentes">
+    <property name="title">
+     <string>Ventes</string>
+    </property>
+    <addaction name="actionEnregistrer_une_vente"/>
+    <addaction name="actionEnregistrer_une_vente_priv_e"/>
+    <addaction name="actionEnregistrer_une_vente_cr_dit"/>
+    <addaction name="separator"/>
+    <addaction name="actionAnnuler_une_vente"/>
+    <addaction name="separator"/>
+    <addaction name="actionInventaire_en_salle_de_vente_2"/>
+    <addaction name="actionInventaire_du_magasin"/>
+    <addaction name="actionInventaire_du_stock_entier"/>
+    <addaction name="separator"/>
+    <addaction name="actionHistorique_des_ventes"/>
+    <addaction name="separator"/>
+    <addaction name="actionImprimer_un_re_u"/>
+    <addaction name="action_Imprimer_un_ticket_de_caisse"/>
+   </widget>
+   <widget class="QMenu" name="menuProduits">
+    <property name="title">
+     <string>Produits</string>
+    </property>
+    <widget class="QMenu" name="menuAfficher_les_produits">
+     <property name="title">
+      <string>Afficher les produits </string>
+     </property>
+     <addaction name="actionpar_date_de_p_remption"/>
+     <addaction name="actionpar_forme_pharmaceutique"/>
+     <addaction name="separator"/>
+     <addaction name="actionpar_prix_d_achat"/>
+     <addaction name="action_par_prix_de_vente"/>
+     <addaction name="separator"/>
+     <addaction name="actionquantit_en_rayon"/>
+     <addaction name="action_quantit_au_magasin"/>
+    </widget>
+    <addaction name="actionAfficher_tous_les_produits"/>
+    <addaction name="menuAfficher_les_produits"/>
+    <addaction name="actionAffich_les_produits_p_rim_s"/>
+    <addaction name="action_Affich_les_produits_cass_s"/>
+    <addaction name="separator"/>
+    <addaction name="actionAjout_d_un_produit"/>
+    <addaction name="actionReconditionnement_d_un_produit"/>
+    <addaction name="action_Mouvement_d_un_produit"/>
+    <addaction name="actionSupprimer_un_produit"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuUtilitaires">
+    <property name="title">
+     <string>Utilitaires</string>
+    </property>
+    <widget class="QMenu" name="menuAssurances">
+     <property name="title">
+      <string>Assurances</string>
+     </property>
+     <addaction name="actionAjouter_un_assureur"/>
+     <addaction name="actionSupprimer_un_assureur"/>
+    </widget>
+    <widget class="QMenu" name="menuFournisseurs">
+     <property name="title">
+      <string>Fournisseurs</string>
+     </property>
+     <addaction name="actionNouveau_fournisseur_2_"/>
+     <addaction name="action_Supprimer"/>
+     <addaction name="actionListe_de_fournisseurs"/>
+    </widget>
+    <addaction name="menuAssurances"/>
+    <addaction name="menuFournisseurs"/>
+    <addaction name="actionConnection_la_base"/>
+   </widget>
+   <widget class="QMenu" name="menuCommandes">
+    <property name="title">
+     <string>Commandes</string>
+    </property>
+    <widget class="QMenu" name="menuApprovisonnements">
+     <property name="title">
+      <string>Approvisonnements</string>
+     </property>
+     <addaction name="action_Constituer_une_liste"/>
+     <addaction name="action_Supprimer_une_liste"/>
+    </widget>
+    <addaction name="menuApprovisonnements"/>
+   </widget>
+   <widget class="QMenu" name="menu_Securit">
+    <property name="title">
+     <string> Securité</string>
+    </property>
+    <addaction name="actionFemer_votre_session"/>
+    <addaction name="action_Quitter_GeP"/>
+   </widget>
+   <addaction name="menuJourn_e"/>
+   <addaction name="menuVentes"/>
+   <addaction name="menuProduits"/>
+   <addaction name="menuCommandes"/>
+   <addaction name="menuUtilitaires"/>
+   <addaction name="menu_Securit"/>
+  </widget>
+  <action name="actionOuvrir_une_nouvelle_journ_e">
+   <property name="text">
+    <string>Ouvrir une nouvelle journée</string>
+   </property>
+  </action>
+  <action name="actionFermer_une_nouvelle_journ_e">
+   <property name="text">
+    <string>Fermer cette  journée</string>
+   </property>
+  </action>
+  <action name="actionActiver_une_semaine_de_garde">
+   <property name="text">
+    <string>Activer une semaine de garde</string>
+   </property>
+  </action>
+  <action name="actionD_sactiver_une_semaine_de_garde">
+   <property name="text">
+    <string>Désactiver une semaine de garde</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_une_vente">
+   <property name="text">
+    <string>Enregistrer une vente</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_une_vente_priv_e">
+   <property name="text">
+    <string>Enregistrer une vente privée</string>
+   </property>
+  </action>
+  <action name="actionEnregistrer_une_vente_cr_dit">
+   <property name="text">
+    <string>Enregistrer une vente à crédit</string>
+   </property>
+  </action>
+  <action name="actionAnnuler_une_vente">
+   <property name="text">
+    <string>Annuler une vente</string>
+   </property>
+  </action>
+  <action name="actionAfficher_tous_les_produits">
+   <property name="text">
+    <string>Afficher tous les produits</string>
+   </property>
+  </action>
+  <action name="actionpar_date_de_p_remption">
+   <property name="text">
+    <string>Par date de péremption</string>
+   </property>
+  </action>
+  <action name="actionpar_forme_pharmaceutique">
+   <property name="text">
+    <string>Par forme pharmaceutique</string>
+   </property>
+  </action>
+  <action name="actionAffich_les_produits_p_rim_s">
+   <property name="text">
+    <string>Affiché les produits périmés</string>
+   </property>
+  </action>
+  <action name="action_Affich_les_produits_cass_s">
+   <property name="text">
+    <string>Affiché les produits cassés</string>
+   </property>
+  </action>
+  <action name="actionInventaire_en_salle_de_vente_2">
+   <property name="text">
+    <string>Inventaire en salle de vente</string>
+   </property>
+  </action>
+  <action name="actionInventaire_du_magasin">
+   <property name="text">
+    <string>Inventaire du magasin</string>
+   </property>
+  </action>
+  <action name="actionInventaire_du_stock_entier">
+   <property name="text">
+    <string>Inventaire du stock entier</string>
+   </property>
+  </action>
+  <action name="actionHistorique_des_ventes">
+   <property name="text">
+    <string>Historique des ventes</string>
+   </property>
+  </action>
+  <action name="actionAjout_d_un_produit">
+   <property name="text">
+    <string>Ajouter un produit</string>
+   </property>
+  </action>
+  <action name="actionImprimer_un_re_u">
+   <property name="text">
+    <string>Imprimer un reçu</string>
+   </property>
+  </action>
+  <action name="action_Imprimer_un_ticket_de_caisse">
+   <property name="text">
+    <string>Imprimer un ticket de caisse</string>
+   </property>
+  </action>
+  <action name="actionAjouter_un_assureur">
+   <property name="text">
+    <string>Ajouter un assureur</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_un_assureur">
+   <property name="text">
+    <string>Supprimer un assureur</string>
+   </property>
+  </action>
+  <action name="actionReconditionnement_d_un_produit">
+   <property name="text">
+    <string>Reconditionnement d'un produit</string>
+   </property>
+  </action>
+  <action name="action_Mouvement_d_un_produit">
+   <property name="text">
+    <string>Mouvement d'un produit</string>
+   </property>
+  </action>
+  <action name="actionpar_prix_d_achat">
+   <property name="text">
+    <string>par prix d'achat</string>
+   </property>
+  </action>
+  <action name="action_par_prix_de_vente">
+   <property name="text">
+    <string>par prix de vente</string>
+   </property>
+  </action>
+  <action name="actionquantit_en_rayon">
+   <property name="text">
+    <string>quantité en rayon</string>
+   </property>
+  </action>
+  <action name="action_quantit_au_magasin">
+   <property name="text">
+    <string>quantité au magasin</string>
+   </property>
+  </action>
+  <action name="actionSupprimer_un_produit">
+   <property name="text">
+    <string>Supprimer un produit</string>
+   </property>
+  </action>
+  <action name="actionNouveau_fournisseur_2_">
+   <property name="text">
+    <string>Nouveau fournisseur</string>
+   </property>
+  </action>
+  <action name="action_Supprimer">
+   <property name="text">
+    <string>Supprimer un fournisseur</string>
+   </property>
+  </action>
+  <action name="action_Constituer_une_liste">
+   <property name="text">
+    <string>Nouvelle liste</string>
+   </property>
+  </action>
+  <action name="action_Supprimer_une_liste">
+   <property name="text">
+    <string> Supprimer une liste</string>
+   </property>
+  </action>
+  <action name="actionFemer_votre_session">
+   <property name="text">
+    <string>Femer votre session</string>
+   </property>
+  </action>
+  <action name="action_Quitter_GeP">
+   <property name="text">
+    <string>Quitter &quot;GeP&quot;</string>
+   </property>
+  </action>
+  <action name="actionListe_de_fournisseurs">
+   <property name="text">
+    <string>Liste de fournisseurs</string>
+   </property>
+  </action>
+  <action name="actionConnection_la_base">
+   <property name="text">
+    <string>Connection à la base</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
